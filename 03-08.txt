@@ -1,0 +1,66 @@
+1 README.md ----------->包含了项目的信息以及用法
+2.   .gitignore ---------->就包含了上传项目到git服务器上，那些文件或者文件夹不要上传
+3。 .eslint...    ---------> 用来配置eslint插件它的一些东西（eslint是一个js代码规范插件） 
+
+
+版本控制管理工具：
+      svn（小乌龟）
+        我们的代码都在服务器上（代码移植在服务器上的并不存在电脑里面）
+缺点：如果服务器崩掉了，那么代码就不能查看或者修改或者提交只能在公司修改，除公司以外就用不了
+ GUI操作界面简单
+ 
+ git
+    我们代码，每个人的电脑里面都有。然后服务器上是公共的。
+    优点：无论是否在公司，都可以对代码进行提交，修改
+  
+  命令式的
+  git 配置 （如果是第一次安装，需要配置） ：
+      git config --global user.username   用户名
+      git config --global  user.email  邮箱地址
+      
+      git config   --global user.username   "ychow"
+      git  config  --global  user.email   "yuanzhouxiao@foxmail.com"
+  
+  
+  
+git常用的几个命令：
+    1拉去远程项目到本地电脑（下载）
+          git clone 项目地址
+          比如：git clone  http://github.com/ychow/githubTest.git
+    
+    2.就可以对本地电脑项目进行修改，编辑，删除。。。
+    
+    3. 提交代码：
+             在添加代码时先更新本地代码
+                      git pull（更新本代码，和远程服务器上的代码同步）
+          11） git add.  （把我们修改后的文件或者添加的文件添加到一个叫做缓存区里面）
+                  .表示所有的文件
+                  当然了也可以跟上某一个文件名或者文件夹
+           22） git commit  -m “注释的内容”
+           对我们本次修改的代码，进行说明。。
+           比如：  git commit  -m  “删除了logo.html文件”
+           33）git  push
+           上传代码
+           
+           分支（branch）：
+           master  主分支（）上面一般都存放的是稳定版的
+ 
+ 有一个项目
+      4个前端同时开发（每个人自己开启一个分支），写完之后，在合并分支
+      git  checkout “分知名”       ------------>切换分支
+        
+        合并分支：就是把分支上的代码覆盖到master上面去
+        
+        首先把当前的分支
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

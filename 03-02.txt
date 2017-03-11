@@ -1,0 +1,83 @@
+文档的高度就是它字体大小。如果设置了行高。你们行高就变成了文字的高度
+SVG用来做动画的
+
+过渡
+   1） transition：对那个属性进行过渡（width/height/background/all(匹配所有属性））         2）动效的时间（1s/300ms）
+  3）延迟时间
+    4）动效的速度（ease默认值/ease-in 逐渐变快/ease-in-out先快后慢）
+   贝赛尔曲线（cubic-bezier）/linear匀速
+    5）steps（分成几步完成）
+    
+    在线生成贝塞尔曲线网址：http：//cubic-bezier.com
+    
+    canvas
+    移动端布局
+    
+    微信小程序
+    
+    angularjs
+    ionic
+    
+    hybrid（混合开发）
+    
+    es6/webpack/ gulp/node/react/git/vue
+    
+    transform：
+    1）旋转 rotate（具体要旋转的度数）
+         rotateX
+         rotateY
+         rotateZ
+    eslint 规范我们的代码格式（js）
+    2）scale（x，y）
+    scaleX
+    scaleY
+    小于1的值------>缩小相应的倍数
+      1 --------->表示不放大也不缩小
+      大于1 -----------> 放大的倍数
+      
+      3）translate（距离值）位移
+      translateX（）水平方向的位移（正值往右，负值往左）
+       translateY（）竖直方向的位移（正值往下，负值往上）
+        translateZ（）垂直于屏幕方向（正值离我们越来越近，负值离我们越来越远）
+     
+     4）skew（）斜切
+          skewX（）
+            skewY（）
+    里面的值是角度
+    
+    用来设置它的中心点
+        transform-origin：x,y,z,
+        x/y/z可以放上方位词（left/center/right）还可以方具体的像素值
+        
+        用来开启哪一个模式的（2d/3d）
+        transform-style ：flat（平面）/preserve-3d（开启3d模式）
+        
+        perspective（景深）
+        注意：如果想要添加景深这个属性，我们需要添加了开启3d模式的父元素加
+        就是用来设置我们从多远的距离看这个物体（近大远小） 我们一般设置500-800
+        
+    content的用法
+    可以获取到当前元素的属性值
+    attr（属性名称）
+    
+    注意：
+    1）transition不能更改突变的属性值（display）
+    2）如果元素不是块元素，那么给它设置transform无效
+    3）transition 一定要加在要动的那个元素上
+    
+    display（不会占据文档流）
+    visibility（视觉上是隐藏掉了，其实仍然占据着文档流）
+    opacity 
+    
+    transition 第一个例子
+          11）鼠标移入文字，从文字后面出现其他东西
+          22）3d翻转
+          33）底部色块平花渐隐
+          44）顶部下移
+          55）歌词效果
+          66）三个点
+          
+    pointer-events：none  取消鼠标事件
+    
+    
+    

@@ -1,0 +1,159 @@
+1 calc 用来做计算的。
+2 border-sizing （兼容性：IE8+）
+   11）content-box  默认值 和不写这个样式一样的
+   22）border-box  我们给一个元素设置的宽高就是他实际的宽高，如果给这个设置padding，主内容区域就变小
+
+3 background-origin 背景绘制区域（Chrome浏览器不支持，火狐不支持）
+   11）content--box
+   22）border-box  默认值
+   33）padding-box
+
+4 background-clip  背景绘制区域
+   11）content--box
+   22）border-box   默认值
+   33）padding-box
+
+5 background 支持多重背景
+  background：url（）no-repeat left top，background：url（）no-repeat right bottom Skyblue
+
+6 阴影 box-shadow：inset（内阴影）x,y,size 增强（实心的颜色/可选参数）,color
+   x/y阴影的位置 （x值为正数（往右偏），y值为正数（往下走））
+   size  阴影的大小 （直接用ps量  或者问设计师）
+   color  阴影的颜色 rgba也是可以的
+	文字阴影：text-shadow ：x,y,
+	
+7圆角 border-radius 
+   11）百分比
+   22）具体的值（10px）
+
+8 线性渐变 background-image：linear-gradient（颜色1，颜色2 ……）
+	方向：11）to bottom， to top， to left，to right
+	      22）可以放上角度 20deg
+		正数角度是顺时针旋转
+		负数角度是逆时针旋转
+	宽度：放上具体的像素值，也可以放上百分比
+	重复线性渐变：repeating-linear-gradient（）
+9 径向渐变：radial-gradient（方向，形状，颜色1，颜色2……）
+形状：11）circle 圆
+	22）ellipse 椭圆
+
+
+10  自定义属性：data-*
+
+	图片懒加载？
+	当用户滚动到某一区域的时候，才把真实图片的地址放到src属性里面<img src="默认图片" data-src = “真实的图片”/>
+	预加载？
+	判断用户的下一个操作,然后提前加载相应资源
+	
+	jq里面获取data-*自定义属性里面的值
+	里面有一个data（）
+
+
+11 优雅降级，渐进增强
+优雅降级：用户使用低版本的浏览器，能够正常网站的一些服务
+渐进增强：用户用稍好的浏览器，能够给用户不错的体验
+
+
+12 文字超出隐藏
+{
+width：100px；
+white-space：nowrap；
+overflow：hidden；
+text-overflow：ellipse；
+}
+如果多行文字超出隐藏，这个需要我们计算文本框总共可以放多少个字节，在拿到用户输入到里面的文字，进行比较。如果输入的文字超出了限制，就在末尾插入…
+
+
+13 用css做一个三角形
+{
+display：inline-block；
+width：0；
+height：0；
+margin-left：2px；
+vartical-align：middle；
+border-top：4px dashed；
+border-top：4px solid\9；
+border-right：4px solid transparent；
+border-left：4px solid transparent；
+}
+
+
+14 弹性盒子
+   -webkit-box（老版本的，但是它的兼容性好）
+flex 新版本
+
+只要开启了弹性盒子，里面的浮动，clearn vertical是不会生效的。
+
+1）-webkit-box
+   需要通过display给元素设置开启弹性盒子
+
+	设置在开启弹性盒子的元素的子元素上
+        -webkit-box-flex：1
+	（浏览器窗口的宽度-总共的宽度）/你要平均总分的份数 = 前面的值就是每一分	的宽度
+
+	设置水平方向的对齐方式（）
+	-webkit-box-pack ：start（左居中）/end（右居中）/center（水平居	中）/justify（两	端对齐）
+
+	设置垂直方向的对齐方式
+	 -webkit-box-align：start（在顶部）/end（在底部）/center（垂直居	中）/justify（	两端对齐）
+
+	设置排列方式
+	 -webkit-box-orient：horizontal（水平）/vertical（垂直）
+	如果把弹性盒子设置成了垂直方向，那么-webkit-box-pack它就是成了设置垂	直方向的了
+
+	设置排列顺序的
+	-webkit-box-direction：reverse（反向排列） normal（默认值）
+
+
+2）flex
+    通过display：flex
+	display：-webkit-flex；
+	display：-moz-flex；
+	display：-ms-flex；
+	display：-o-flex；
+	
+	flex-direction：row（从左到右）/ row-reverse（从右到左）/
+	 column（垂直，从上到下）/column-reverse(垂直，从下往上）
+
+	水平方向排列：
+	justify-content：flex-start（默认值，水平居中）/flex-end（水平居右）
+	/center（居中）/space-around（元素左右两边的距离相等）/space-between（两端对齐）
+
+	垂直方向排列：
+	align-item：flex-start（顶部对齐）/flex-end（底部对齐）/center（垂直居中）/baseline（基线对齐）/stretch（默认值，默认里面的元素撑满父元素）
+
+	设置多行排列的方式
+	align-content 多行对齐方式（需要多行才行）
+	
+	值有：flex-start（左对齐）/flex-end（右对齐）/center（居中）/space-between	两端对齐/space-around（每个项目两侧的间隔相等）/stretch(撑满)
+
+
+
+	-webkit-flex-shrink 缩小比例
+	此时剩余空间不足是都将等比例缩小
+	0表示不参与缩放比例
+	若没写该属性，则为1
+
+	-webkit-flex-grow 扩展比例
+	剩余空间是正值时，伸缩项目相对于伸缩容器里其他伸缩项目能分配到空间比例
+	若没有该属性，则为0
+	0代表不参与扩展
+
+	设置换行的方法：
+	flex-wrap：wrap（换行）/wrap-reverse（也会换行，顺序会反过去，第一排会跑到	后面去）
+
+
+	设置子元素上面的样式：
+	flex：1；均分宽度
+	当子元素里面的内容超过了均分的宽度。它会先用浏览器窗口的宽度减掉超出元素的	宽度，再来均分。
+
+	align-self：设置当前的元素它的对齐方式
+	允许单个项目与其他项目产生不一样的对齐方式（垂直对齐）
+	值有：auto/flex-start/flex-end/center/baseline/stretch
+
+
+	flex-basis：分配空间之前，已经分得了空间
+	可以把它叫做最小宽度
+	值：可以跟上具体像素值
+
+

@@ -1,0 +1,16 @@
+onload  叫做页面初始化的啊函数
+        这个函数里面一般写上获取页面数据的方法
+        
+   data里面存放页面上所需的数据 
+   
+   bindTap   通过给一个元素 给它添加一个绑定点击事件
+   
+   让某一块内容显示或者隐藏
+   
+   https://y.gtimg.cn/music/photo_new/T003R720x288M000003eWInR0XqIdy.jpg?max_age=2592000&max_age=2592000
+   https://y.gtimg.cn/music/photo_new/T003R720x288M000003Vjjj63mlold.jpg?max_age=2592000&max_age=2592000
+   https://y.gtimg.cn/music/photo_new/T003R720x288M0000039PGa53oZIEH.jpg?max_age=2592000&max_age=2592000
+   https://y.gtimg.cn/music/photo_new/T003R720x288M000000HRKFw3vJenV.jpg?max_age=2592000&max_age=2592000
+   
+   
+   

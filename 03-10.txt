@@ -1,0 +1,26 @@
+https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=1489106491757
+
+微信小程序的列表渲染地址：
+      https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/list.html
+
+在app.json里面
+      "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "page/story/story"
+  ],
+
+
+showapi_sign=aec168c501e14979ad94d731a44ab566
+showapi_appid = 33395
+         鬼故事地址：
+
+
+                    http://route.showapi.com/955-1?type=xy&page=1&showapi_sign=aec168c501e14979ad94d731a44ab566&showapi_appid=33395
+
+
+
+
+
+
+

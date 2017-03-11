@@ -1,0 +1,108 @@
+常用Meta标签：
+      Viewport 设置我们的视窗大小
+      user-scalabel =no ：禁止用户使用手势放大我们的页面
+      initial-scale  设置网页初始化缩放比例（设置为1，表示页面正常大小显示）
+      <meta name="Viewport"
+      content = "width = device-width,user-scalabel = no,initial-scale=1"/>
+      
+      
+      重置电话号码和邮箱的 主要针对iPhone手机
+      <meta name = "format-detection" content = "telephone = no,email = no"/>
+      
+      用safari 浏览器访问页面的时候，全屏现在（不显示地址栏）
+      <meta content="yes" name = "apple-mobile-web-app-capale"/>
+      
+      设置苹果手机自带浏览器（safari）导航样式为黑色
+      <meta content = "black" name = "apple-mobile-web-app-status-bar-style"/>
+      
+   切图的做法：
+   1）pc端页面
+    设计图有多少个px，我们在设置css时直接给他设置
+    
+    2）移动端的页面：（设计图2X,3X）
+    1)640（宽度）iphone4宽度2倍
+          如果设计图是按照640来设计的，那么切出来的图片在Iphone6 plus手机上访问 就产生发虚的效果
+      
+     2）750 （iPhone6 的分辨率375 2倍    
+      3）1242  iPhone6 plus分辨率的3倍 图片的大小
+      
+      移动布局
+      1）固定宽度（固定我们的视窗的宽度）
+      把我们的Viewport里面的宽度设置成设计图的宽度。
+      Viewport里面需要添加user-scalabel=no，去掉initial-scale=1。
+      把我们body设置样式：
+      {
+      min-width：320px；/*  移动端设备分辨率最小 */
+      max-width：750px；/*  设计图的宽度 */
+      margin ：0 auto；
+      }
+      我们切图的时候，设计图有多少px写的时候直接写就好了
+      缺点：文字在有的机型上，可能有点发虚，有点模糊
+      
+      2）rem 布局
+      rem相当于 根节点（html）字体大小
+      实际上就是根据用户当前访问的设备，来动态更改html的字体大小
+      
+      注意：不需要添加viewport。 moblie.js会自动为我们添加
+      
+      
+      响应式布局：
+      响应式布局需要考虑：pc浏览器/手机/平板/TV（电视）/print（打印机）
+      响应式布局的页面，都不会特别复杂，
+      每一个设备上面的页面，都有所差别。
+      响应式页面，工作量比较大，徐针对每个设备以及每个分辨率来写相应样式
+      @media 媒体查询
+      @media 针对某个设备来写样式（screen/tv/print/all）( min-width:320px) and(max-width:640px){
+      
+      }
+      screen 针对的屏幕，不包括print
+      tv 只针对电视
+      print  打印机
+      all 所有设备
+      
+      
+      微信端里面的页面：
+      就是我们做好的移动端页面。
+      做好的移动端页面，就会上传到公司的服务器，我们就可以通过相关的域名来访问做好的页面，
+      
+      公众号后台管理界面。在这里面可以设置公众号的菜单
+      
+      
+      
+      首先得安装下node
+      然后通过npm( 包管理器) 来下载anywhere
+      anywhere   快速开启一个本地的服务器环境。
+      
+      开启cmd的方法：
+      1）使用开启菜单 ------> 附件 ------>cmd（命令符）
+      2）系统键 +R然后输入cmd，然后回车或者确定。
+      
+      常用的一些cmd操作：
+      1）切换盘符  盘名，后面加冒号。比如：d:（大小，不影响），然后0回 车。
+      2）切换路径  使用cd跟上你要进入的路径
+      
+      使用anywhere 的步骤：
+      1）使用cmd，切换到你要开启的服务器的目录里。
+      2）输入anywhere ，然后回车，自动打开默认浏览器
+      设置端口号：
+      anywhere -p 4000
+      
+      关闭当前进程：
+      两次ctrl+c
+      
+      NPM（包管理器）
+      官网地址：http：//www.npmjs.com/
+      
+      localhost ---------127.0.0.1
+      
+      npm命令的语法
+          下载插件：
+          npm install 插件名 -g（全局下载）/  --save（线上环境才需要用的插件）/----save-dev（开发环境才需要的）
+      
+   删除插件：
+   npm unstall 插件名 -g
+   
+      
+      
+      
+      

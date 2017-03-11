@@ -1,0 +1,189 @@
+常用的动效库： animate.css
+
+README   markdown（文档）
+http://sspai.com/post/25137  markdown文档
+
+README.md 这个文档里面有该插件（框架）的一些介绍，以及相关用法
+
+zepto.fullpage.js
+基于zepto.js介绍一个移动端的jQuery
+1）zepto.js的体积比jquery小
+2）他们的API基本一样
+
+zepto.js里面有touch模块
+http://github.e-sites.nl/zeptobuilder/     在线选取zepto模块的一个网站
+可以生成的文件有问题
+
+在移动端里 click和tap有区别
+触发时间的区别
+click需要350ms
+tap需要200多ms
+
+注意：使用zepto会引发点透的问题
+解决zepto点透的问题？
+需要使用fastclick这个插件解决点透问题
+
+深拷贝/浅拷贝
+$.extend
+var obj ={
+name:'dd',
+arr:[
+1,2,34]
+};
+var obj2 =obj;
+obj2.name = 'xixi' ;
+利用JSON对象做一个深拷贝
+JSON.stringify
+JSON.parse
+
+console.log(onj.name)
+var str1 = 'xixi';
+var str2 = str1;
+str2 = 'haha';
+console.log(str1); 'xixi'
+jQuery(''div) $('div')
+
+
+
+
+
+animation
+    transition：需要给哪个属性添加过渡的效果   过渡时间  延迟的时间  动效的速度（linear/ease/ease-in/ease-in-out/贝赛尔曲线） steps（把动效分几步完成）
+
+animation：关键帧动画的名字  过渡时间 延迟时间  动效速度 （linear/ease/ease-in/ease-in-out/贝赛尔曲线）  循环次数（数字/infinite（一直循环））
+设置动画结束的样式（backwards（元素最开始的样式）/both（保留最终样式）forwards（让元素拥有最后样式））  是否反向（alternate） 如果设置了方向，也会加入循环次数
+
+定义关键帧动画：
+@keyframes  名字
+@keyframes 名字{
+
+0%{
+//写上最开始的时候，该物体的样式
+}
+25%{
+……
+}
+50%{
+……
+}
+75%{
+……
+}
+100%{
+……
+}
+}
+
+0（动效开始的时间）----100%（动效完成的时间）
+@keyframes 名字{
+from{
+//开始的样式
+}
+to{
+//结束
+}
+}
+
+
+canvas 画布
+    css3 如何画一个三角形
+    利用border就可以了
+    
+    为我们提供了一个API：渲染上下文 getContext（2d/3d）
+    
+    webgl  制作3d页面
+    three.js
+    
+canvas 有一个默认样式 宽度300px 高度150px；
+默认颜色为黑色
+
+设置宽高：
+1）<canvas width = '800' height='600'></canvas>
+
+还可以通过js来设置宽高
+2) var can = document.querySelector('canvas')
+  can.width = '600'
+  can.height = '400'
+  
+canvas的宽高不能通过css设置！！！
+canvas的坐标（0,0）在左上角
+
+如何画正方形
+画一个填充的正方形
+fillRect（x,y,w,h）
+x,y：横纵坐标
+w：宽度
+h：高度
+
+画一个只有边框的正方形
+strokeRect（x,y,w,h）
+
+只是在画布上标注了正方形的四个点
+rect（x,y,w,h）
+
+fill（）填充（会把路径自动闭合）
+
+stroke（）画线
+
+设置连线的颜色
+strokeStyle =‘颜色值’
+设置填充的颜色
+fillStyle = ‘颜色值’
+
+如何画线
+
+设置开始的坐标点
+moveTo（x，y）
+
+设置点的坐标
+lineTo（x，y）
+
+开始路径
+beginPath（）
+
+闭合路径
+closePath（）
+
+画折线图/柱状图/饼图
+Echarts/highcharts
+
+如何画圆
+arc（x，y，r，起始弧度，结束弧度，旋转方向（true/逆时针）/false 顺时针）
+x，y --------》圆心坐标
+r --------》半径
+弧度 = (Math.PI/180)*度数
+
+canvas里面要做动画，实际上就是把之前的都清掉，重新画
+cleanRect（x，y，w，h）
+
+
+画图片：
+drawImage（image,x,y,w,h）
+
+画文字：
+fillText( 你要画的文字,x,y)
+strokeText( 你要画的文字,x,y)
+
+画折线图/柱状图/饼图……
+Echarts/hightcharts
+
+
+布局（rem/em/vw/vh）
+em/rem 都是相对单位
+em是相对于父元素的字体大小
+rem 相对于根元素的（html）
+
+vw（视窗宽度）/vh（视窗高度）
+js里面如何获取视窗的宽高：window。innerHeight/window.innerwidth;
+这两个相对于我们的100%；
+1vw == 1%；
+
+页面里面一旦有一长串数字，或者有邮箱地址的时候，在IOS手机上，会给它添加默认样式（字体比较大，颜色为蓝色）。而且这个样式通过css 去不掉的 !!!!
+
+
+
+
+
+
+
+

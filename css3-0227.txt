@@ -1,0 +1,111 @@
+< !DOCTYPE html>
+!------>     注意
+lang = “en”，  定义我们的文档类型
+charset = ‘utf-8’    定义我们文档编码的类型 gb123是中文编码
+mate http-equiv = “X-UA-Computatible” content = “ie=edge”’
+当我们的Html在IE浏览器下访问的时候，ie会默认启动你电脑里面最新的ie来渲染页面
+
+为什么会有html5/css3
+html5它新增了哪些东西
+1）新增了一些语义化标签（不要把新增的语义化标签当div用）
+	nav（用来包裹导航），header（头部，header并不是只表示页面头部，主要是一块区域里的头部都可以用），footer（底部），main（页面主体），aside（和主题内容相关，但与可以忽略掉，比如广告，第三方分享插件（jiathis，百度分享））
+article  文章，帖子，引用的外部段落
+setion并不能当做div来用！！！！！！！！ 它里面可以包裹标题，图片，段落
+<nav>
+	<ul>
+		……
+	</ul>
+</nav>
+<div class = ‘main’>……</div>
+
+2）新增了API
+	拖拽：drag
+	历史记录：history
+  	离线文件：minifast.xml
+	获取地理位置信息：geolocation（有误差，由于某国的政策）获取经纬度，然后调用第三方地图（百度地图，高德地图，谷歌地图），标注出经纬度，就能够看到你所在的地方
+storage 存储（localStorage/sessionStorage）
+
+解决IE浏览器的兼容问题：
+	1）在ie浏览器里面，会给我们的html5新增的标签，自动结束
+	2）解决ie浏览器兼容的问题
+	3）<!--[if lt ie 9]>
+	<script src = “html5.min.js”><script>
+	<![endif]-->
+	
+	lt 小于
+	gt 大于
+	lte 小于等于
+	gte 大于等于
+	
+
+	html5新增标签：
+	1）datalist 模糊搜索
+		配合着option来使用，option里面的value值就是搜索的		值，标签中间的内容就是右侧的是文字
+	2）detals 解释
+		summary是用来设置标题的
+		details有一个属性 open
+
+	3）mark 标记
+	4）hgrounp 标题组 充当语义化的作用
+	<hgrounp>
+	<h1></h1>
+	<h2></h2>
+	</hgrounp>
+	
+	5)time用来包裹时间，没有特殊样式，只是起着语义化作用
+	《p》现在的时间是<time dataTime = ‘2017-2-27’
+	
+	6）音频 audio
+	
+	之前想在页面里面嵌入视频，音频怎么做？
+	audio标签的属性：
+	1）controls  显示浏览器控制条，每个浏览器的都不一样
+	2）muted 静音
+	3）loop   循环	
+	4）preload  预加载
+	音频格式：mp3，ogg wav三种形式
+	借助格式工厂工具转换音频格式
+
+
+	7）vediosp
+	1）controls 显示浏览器自带的控制条
+	2）muted 静音
+	3）loop   循环	
+	4）preload  预加载
+
+
+	
+	表单：
+	对input新增了一些type类型
+	mail ----邮箱地址
+	tel ----> 电话号码
+	number ---->数字
+	url---->网址
+	time ---->时间
+	week ---->周
+	range ---滑块
+	placeholde -----> 用来设置默认值
+
+	autocomplete -------》 自动生成
+
+	capitalize ------>设置首字母大写，它的值是on还是off 		iphone独有的属性
+	form标签上面有一个属性叫做navolide（取消html5自带的浏览器校验）
+	表单里面，如果没有给bottom按钮添加一个type类型，默认这个按钮的type类型就是submit
+
+
+	src 和 href 有什么区别
+	href ：可以同时加载。<link href = "css"/>
+	src :是一个替换资源，会阻碍当前的进程，只有src加载完了才执行后面的
+	img src = “指定需要加载的图片”
+	
+html4选择器：
+css：
+	a>b 表示a是b的子元素
+	a+b 表示a后面的一个b标签
+	a~b 表示a后面所有的b标签
+	
+	
+
+js -----》
+
+

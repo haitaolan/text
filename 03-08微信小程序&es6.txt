@@ -1,0 +1,100 @@
+  es5:
+      function aa(){
+      console.log('haha')
+      }
+      aa();
+      
+     es6: 
+      箭头函数只能创建一个匿名函数
+      var aa = （） => console.log('haha');
+      以下都是修改this指向的
+
+ES6：
+    EcmaScript 2015版本
+  有一个编译工具： es6   ----------->es5
+      babel ------->http://bablejs.io/
+      babel 可以帮助我们把es6   -------->es5 还可以把jsx（React的语法） ----->js
+      1 . let
+          11)用来定义变量
+          22）没有预解析
+          33）有块级作用域
+          
+      2  conts
+      11）用来定义常量的
+      22）也有块级作用域
+      
+      3  字符串模板
+      “hello，${变量名}”
+          11）可以保留我们写代码的格式（pre标签）
+          22）以变量名，把字符串拆分成数组
+     
+     4 箭头函数   （Arrow  Function） 
+       里面的this，它的指向不是看函数有谁调用，而是看他在哪里定义的（它的指向在定义该函数时的上下文）
+          如果里面的语句只有一句，既可以不用写{}
+          而且如果只有一句，不用写return。
+   
+   
+   8 .reset运算符（…）    
+   
+   9 解构赋值
+        按照一定的模式。来把对象或者数组里面的值，提出来。
+        
+    10. promise
+    是一种规范。是一种用来解决异步的方法。
+    jq里面的ajax
+    js里面deXMLHttpRequest
+    
+    什么叫异步？ 同时进行。。。
+    什么叫同步？前面的进程需要完成，后面的任务才能开始
+    
+    alert（1）
+    $.ajax({
+    url：‘xxx’，
+    success：function（res）{
+    data= res；
+    }
+   })；
+        console.log（data）  
+      
+      
+      异步回调地域
+         有3个接口
+                第一个接口需要参数，需要请求第二个接口，根据第二个接口返回过来的数据，然后传给第一个接口
+         $.ajax({
+         url:‘第一个接口地址’，
+         success：function（res）{
+         
+         }
+         })     
+           
+      11. fetch
+          var xml = new XMLHttpRequest();
+          xml.open(get/post,url);
+         xml.nredystatechange = function(){
+         if(xml.readyState == 4 & xml.status == 200){
+          console.log(this.response);
+         return;
+         }
+         };
+         xml.responseType('json');
+      
+      
+      
+      
+      
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
